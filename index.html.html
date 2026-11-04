@@ -1,0 +1,785 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><title>Smile Odontologia - Dr. Kenny</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;margin:0;padding:0;overflow-x:hidden;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Animations & Interactive Experience */
+@keyframes heroFadeUp {
+  0% { opacity: 0; transform: translateY(22px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroScaleIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes ambientPulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.08); }
+}
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-scale-in {
+  opacity: 0;
+  animation: heroScaleIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-ambient-glow {
+  animation: ambientPulse 7s ease-in-out infinite;
+}
+.animate-float {
+  animation: floatSoft 5s ease-in-out infinite;
+}
+
+.delay-100 { animation-delay: 120ms; }
+.delay-200 { animation-delay: 240ms; }
+.delay-300 { animation-delay: 380ms; }
+.delay-400 { animation-delay: 520ms; }
+.delay-500 { animation-delay: 660ms; }
+
+/* Scroll reveal helper */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up, .animate-scale-in, .animate-ambient-glow, .animate-float, .reveal-on-scroll {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#406181", "surface-variant": "#dbe4eb", "tertiary-fixed": "#cbe6ff", "on-surface": "#141d22", "secondary-fixed-dim": "#a8caee", "on-secondary-container": "#3d5e7e", "primary": "#005282", "on-primary-container": "#d4e8ff", "on-tertiary-fixed-variant": "#0c4b6e", "secondary-container": "#b6d8fd", "error": "#ba1a1a", "surface-container": "#e6eff6", "inverse-primary": "#97cbff", "on-primary-fixed": "#001d33", "surface-tint": "#1c6395", "tertiary-container": "#376b90", "surface-bright": "#f5faff", "tertiary-fixed-dim": "#9accf6", "outline": "#717880", "on-primary": "#ffffff", "surface": "#f5faff", "on-secondary-fixed-variant": "#274968", "on-error": "#ffffff", "error-container": "#ffdad6", "primary-fixed-dim": "#97cbff", "surface-container-lowest": "#ffffff", "surface-container-highest": "#dbe4eb", "inverse-surface": "#293237", "secondary-fixed": "#cfe5ff", "on-secondary-fixed": "#001d33", "inverse-on-surface": "#e9f2f9", "on-secondary": "#ffffff", "surface-dim": "#d2dbe2", "on-tertiary-fixed": "#001e30", "primary-fixed": "#cee5ff", "outline-variant": "#c1c7d0", "tertiary": "#173B59", "on-tertiary-container": "#d0e8ff", "surface-container-low": "#ecf5fc", "on-error-container": "#93000a", "on-background": "#141d22", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#004a76", "background": "#f5faff", "surface-container-high": "#e0e9f0", "primary-container": "#286b9e", "on-surface-variant": "#41474f", "hero-blue": "#173B59", "accent-cyan": "#77A9D1", "accent-light": "#99ccf0" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" }, spacing: { "margin": "3rem", "space-md": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-2xl": "4rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem" }, fontFamily: { "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Smile Odontologia Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQE__1etcWbdGL7Y7bQh1GxWWvhMVak-j1VrV8mVgFd7XvqGiShHlvTuWAp-DxfgOkDuQZ2L5hXGVaWe_R8VEnHuzkhFrC0xvdIzycnsSuMyMD4RPNM4k8g529UZmx2tTO8AGCTRPRe7D40Gy6ElwbmGhwzfDaXdbZaSYawtOe-d427AS3iETz50yXebxiaGH5hhy76EatdDn-jGwh5yfDAZ_uTuzhXU9zBvtrv_c"><div class="flex flex-col min-w-0 leading-tight"><span class="font-label-md text-label-md text-primary tracking-tight truncate">Dr. Kenny • Cáceres</span><span class="font-headline-sm text-headline-sm text-on-surface truncate">Início</span></div></div><div class="flex items-center gap-space-xs shrink-0"><a class="inline-flex items-center justify-center h-10 px-3.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary transition-colors shadow-sm" data-path="agendar-consulta" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank"><span class="">Agendar</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAMVSahXHgE3wGINA00QQPjezgE_1a3K6vynrpB_lenHXqhdGd6HsPN4NMOpF5hea_vTRCj-DxM4VLNuhMDGIrtzZOlmNACnG1SbdCpfCZSx1v6QDAUXeZesgq15tWHfqIXXTKgIMOZHJ_EoTKFibeMPU9YBrfLWbfok_liz-RTcp0XGypay2SvYdNMJTt22ixKGfhd-TK6N8pAH1rQ2f-2mFDl2mrSjU59T1F0hs"></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24"><div class="flex flex-col w-full">
+<!-- Sub-Header Quick Navigation Strip -->
+<div class="w-full bg-surface-container-lowest px-margin-mobile py-space-sm shadow-sm sticky top-16 z-40 border-b border-surface-container-high/60">
+<div class="max-w-screen-xl mx-auto flex items-center justify-between gap-space-sm overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-space-xs shrink-0">
+<img alt="Smile Odontologia Dr. Kenny" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQE__1etcWbdGL7Y7bQh1GxWWvhMVak-j1VrV8mVgFd7XvqGiShHlvTuWAp-DxfgOkDuQZ2L5hXGVaWe_R8VEnHuzkhFrC0xvdIzycnsSuMyMD4RPNM4k8g529UZmx2tTO8AGCTRPRe7D40Gy6ElwbmGhwzfDaXdbZaSYawtOe-d427AS3iETz50yXebxiaGH5hhy76EatdDn-jGwh5yfDAZ_uTuzhXU9zBvtrv_c">
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#inicio">Início</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#clinica">A Clínica</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#tratamentos">Tratamentos</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#diferenciais">Diferenciais</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#localizacao">Contato</a>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1.5 h-9 px-3.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary transition-colors shadow-sm shrink-0" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Kenny" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span class="">(65) 99650-4742</span>
+</a>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- 1. HERO SECTION DE ALTO IMPACTO VISUAL     -->
+<!-- ========================================== -->
+<section class="relative w-full bg-[#173B59] text-white overflow-hidden pt-8 pb-14 md:py-20 lg:py-24" id="inicio">
+<!-- Elementos Gráficos Orgânicos & Iluminação de Fundo -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<!-- Glows e gradientes ambientais -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#286B9E]/30 blur-3xl animate-ambient-glow"></div>
+<div class="absolute top-1/3 -right-20 w-[420px] h-[420px] rounded-full bg-[#77A9D1]/20 blur-[100px] animate-ambient-glow" style="animation-delay: 2.5s;"></div>
+<div class="absolute -bottom-24 left-1/3 w-80 h-80 rounded-full bg-[#005282]/40 blur-2xl"></div>
+<!-- Círculos translúcidos sutis decorativos -->
+<div class="absolute top-12 right-1/4 w-64 h-64 rounded-full border border-white/10 hidden md:block"></div>
+<div class="absolute top-20 right-1/4 w-80 h-80 rounded-full border border-white/5 hidden md:block"></div>
+<!-- Ícones e elementos odontológicos minimalistas translúcidos de apoio -->
+<div class="absolute top-10 right-8 text-white/[0.07] animate-float select-none">
+<span class="material-symbols-outlined text-[72px]">dentistry</span>
+</div>
+<div class="absolute bottom-16 left-6 text-white/[0.05] animate-float select-none" style="animation-delay: 1.8s;">
+<span class="material-symbols-outlined text-[64px]">clean_hands</span>
+</div>
+<div class="absolute top-1/2 left-8 text-white/[0.06] select-none hidden lg:block">
+<span class="material-symbols-outlined text-[48px]">auto_awesome</span>
+</div>
+</div>
+<div class="relative max-w-screen-xl mx-auto px-margin-mobile">
+<div class="flex flex-col lg:flex-row items-center gap-space-xl lg:gap-12">
+<!-- Coluna Conteúdo com animação orquestrada -->
+<div class="w-full lg:w-7/12 flex flex-col items-start gap-space-md z-10 text-left">
+<!-- Badge Institucional elegante com animação -->
+<div class="animate-fade-up inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[#99ccf0] shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-[#77A9D1]">verified</span>
+<span class="font-label-md text-label-md tracking-wide text-white/95">SMILE ODONTOLOGIA • DR. KENNY • CÁCERES - MT</span>
+</div>
+<!-- Título Principal com destaque vibrante -->
+<h1 class="animate-fade-up delay-100 font-headline-xl-mobile lg:font-headline-xl text-headline-xl-mobile lg:text-headline-xl text-white tracking-tight leading-tight">
+          Seu sorriso merece um <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#77A9D1] via-[#99ccf0] to-[#EAF3FA] font-extrabold relative inline-block">
+            cuidado especial.
+            <span class="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#77A9D1] to-transparent rounded-full opacity-80"></span>
+</span>
+</h1>
+<!-- Subtítulo em branco suave e alta legibilidade -->
+<p class="animate-fade-up delay-200 font-body-md lg:font-body-lg text-body-md lg:text-body-lg text-white/85 max-w-xl leading-relaxed">
+          Na Smile Odontologia, você encontra atenção, cuidado e dedicação para cuidar da sua saúde bucal e sorrir com mais confiança.
+        </p>
+<!-- Botões de Ação Principal e Secundário -->
+<div class="animate-fade-up delay-300 w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm pt-2">
+<!-- Botão Principal destacado para agendamento WhatsApp -->
+<a class="group relative h-13 px-7 bg-gradient-to-r from-[#286B9E] to-[#005282] hover:from-[#1c6395] hover:to-[#004a76] text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2.5 shadow-lg shadow-[#001d33]/40 border border-white/20 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98]" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-[#25D366] group-hover:scale-110 transition-transform shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.83 7.42 8.48 7.5 8.19 7.82C7.9 8.14 7.07 8.92 7.07 10.5C7.07 12.08 8.22 13.61 8.38 13.82C8.54 14.03 10.61 17.22 13.78 18.58C14.53 18.91 15.12 19.1 15.58 19.25C16.34 19.49 17.03 19.46 17.57 19.38C18.18 19.29 19.44 18.62 19.7 17.88C19.96 17.15 19.96 16.52 19.88 16.39C19.8 16.26 19.59 16.18 19.27 16.02C18.96 15.86 17.43 15.11 17.14 15C16.86 14.9 16.65 14.85 16.44 15.17C16.23 15.48 15.63 16.18 15.45 16.39C15.26 16.6 15.08 16.62 14.77 16.46C14.45 16.31 13.44 15.98 12.24 14.91C11.31 14.07 10.68 13.04 10.5 12.73C10.32 12.41 10.48 12.24 10.64 12.08C10.78 11.94 10.96 11.71 11.12 11.52C11.27 11.34 11.33 11.21 11.43 11C11.53 10.8 11.48 10.61 11.4 10.46C11.32 10.3 10.72 8.83 10.47 8.23C10.23 7.64 9.98 7.72 9.8 7.71C9.63 7.71 9.42 7.71 9.21 7.71L9.04 7.42Z"></path></svg><span class="font-semibold tracking-wide">Agende sua consulta</span><span class="material-symbols-outlined text-[18px] opacity-75 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+<!-- Botão Secundário Glass / Outline Refinado -->
+<a class="h-13 px-6 bg-white/10 hover:bg-white/15 text-white/95 hover:text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 backdrop-blur-md border border-white/20 transition-all duration-300 hover:border-white/40" href="#clinica">
+<span class="">Conheça nossa clínica</span>
+<span class="material-symbols-outlined text-[18px] text-[#77A9D1]">arrow_downward</span>
+</a>
+</div>
+<!-- Texto de Apoio e Microcopy de Prontidão -->
+<div class="animate-fade-up delay-400 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 pt-1 text-white/80">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#25D366]"></span>
+</span>
+<span class="font-label-sm text-label-sm font-medium text-white/90">Estamos prontos para cuidar do seu sorriso.</span>
+</div>
+<span class="hidden sm:inline text-white/30">•</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-white/70">
+<span class="material-symbols-outlined text-[15px] text-[#77A9D1]">schedule</span>
+<span class="">Atendimento pontual em Cáceres - MT</span>
+</div>
+</div>
+</div>
+<!-- Coluna Imagem: Foto Protagonista do Dr. Kenny com Glow e Elementos Orgânicos -->
+<div class="w-full lg:w-5/12 flex justify-center relative mt-4 lg:mt-0 z-10">
+<!-- Glow suave e anéis orgânicos ao redor do Dr. Kenny -->
+<div class="absolute -inset-4 md:-inset-6 bg-gradient-to-tr from-[#286B9E]/50 via-[#77A9D1]/30 to-transparent rounded-3xl blur-2xl animate-ambient-glow pointer-events-none"></div>
+<div class="animate-scale-in delay-200 relative w-full max-w-[370px] sm:max-w-[390px] aspect-[4/4.5] rounded-3xl p-1.5 bg-gradient-to-b from-white/30 via-white/10 to-transparent shadow-2xl backdrop-blur-sm">
+<div class="relative w-full h-full rounded-[22px] overflow-hidden bg-[#1c4b70]/60">
+<!-- Imagem Exata do Dr. Kenny Mantida Sem Alteração -->
+<img alt="Dr. Kenny - Cirurgião-Dentista Smile Odontologia Cáceres MT" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkEv0VSkYKFr-juWfeekgWyNd4_BBCtJJRmjXLHPbnLuquFhNukMzj3PvXKW4t04glB-SP8PcNnZI9N_mk7b4ycUyz3quZaJRG8uB6q69tWFf2sneV7E0G94bns4_J88UBECAayGwunP1xYw62VsjTToOpvbl2EogrTQ2OW7Bii_-AiuNyAC6eortPUUz_uXzqXjLOrHQFStxVXIaXFuecYNowHo-ETZQkKDss0AYQ5VzHc9z0XXuC5iB0suK07R3">
+<!-- Vinheta e degradê suave inferior -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#173B59]/90 via-[#173B59]/20 to-transparent pointer-events-none"></div>
+<!-- Selo Flutuante Dr. Kenny Integrado -->
+<div class="absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 flex items-center justify-between shadow-xl border border-white/60">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-[#173B59] flex items-center justify-center text-white shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px] text-[#77A9D1]">health_and_safety</span>
+</div>
+<div class="flex flex-col min-w-0 text-left">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-[#173B59] font-bold truncate">Dr. Kenny</span>
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary truncate">Cirurgião-Dentista • Cáceres - MT</span>
+</div>
+</div>
+<div class="hidden sm:flex flex-col items-end shrink-0 pl-2 text-right">
+<span class="font-label-sm text-[10px] uppercase font-bold text-primary tracking-wide">CRO-MT</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Atendimento humanizado</span>
+</div>
+</div>
+<!-- Micro selo odontológico flutuante topo -->
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#173B59]/80 backdrop-blur-md border border-white/20 flex items-center gap-1 text-white text-[11px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-[#77A9D1]">star</span>
+<span class="">Referência</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 2. ELEMENTOS DE CONFIANÇA (FAIXA HORIZONTAL)-->
+<!-- ========================================== -->
+<section class="w-full bg-[#EAF3FA] border-y border-[#77A9D1]/30 py-4 md:py-5 shadow-sm">
+<div class="max-w-screen-xl mx-auto px-margin-mobile">
+<div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#77A9D1]/30 gap-y-3 sm:gap-y-0">
+<!-- Pilar 1 -->
+<div class="flex items-center justify-start sm:justify-center gap-3 px-2 sm:px-4 py-1.5 group">
+<div class="w-10 h-10 rounded-xl bg-white text-[#173B59] flex items-center justify-center shadow-xs border border-[#77A9D1]/20 group-hover:scale-105 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[22px] text-[#286B9E]">dentistry</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-title-md text-title-md text-[#173B59] font-bold leading-tight">Atendimento odontológico</span>
+<span class="font-body-sm text-[12px] text-secondary">Completo, moderno e seguro</span>
+</div>
+</div>
+<!-- Pilar 2 -->
+<div class="flex items-center justify-start sm:justify-center gap-3 px-2 sm:px-4 py-1.5 group">
+<div class="w-10 h-10 rounded-xl bg-white text-[#173B59] flex items-center justify-center shadow-xs border border-[#77A9D1]/20 group-hover:scale-105 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[22px] text-[#286B9E]">favorite</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-title-md text-title-md text-[#173B59] font-bold leading-tight">Cuidado individualizado</span>
+<span class="font-body-sm text-[12px] text-secondary">Tempo exclusivo para cada paciente</span>
+</div>
+</div>
+<!-- Pilar 3 -->
+<div class="flex items-center justify-start sm:justify-center gap-3 px-2 sm:px-4 py-1.5 group">
+<div class="w-10 h-10 rounded-xl bg-white text-[#173B59] flex items-center justify-center shadow-xs border border-[#77A9D1]/20 group-hover:scale-105 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[22px] text-[#286B9E]">verified_user</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-title-md text-title-md text-[#173B59] font-bold leading-tight">Saúde e confiança</span>
+<span class="font-body-sm text-[12px] text-secondary">Sorrisos saudáveis e duradouros</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 3: IDENTIFICAÇÃO (EMPATIA & CONEXÃO) -->
+<section class="w-full px-margin-mobile py-space-xl bg-surface-container-low reveal-on-scroll is-visible">
+<div class="max-w-screen-xl mx-auto flex flex-col items-center text-center gap-space-lg">
+<div class="max-w-2xl flex flex-col items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-semibold tracking-wide uppercase">Cuidado que Transforma</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+          Quando foi a última vez que você cuidou do seu sorriso?
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          A correria do dia a dia faz com que muitas vezes deixemos nossa saúde para depois. Mas cuidar do seu sorriso também é uma forma de cuidar de você, da sua autoestima e da sua qualidade de vida.
+        </p>
+</div>
+<!-- 3 Cartões de Segurança Psicológica & Acolhimento -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-space-md text-left">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">hearing</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Escuta ativa sem julgamentos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Aqui você tem espaço para falar sobre seus receios, histórico e desejos. Cada consulta começa com uma conversa franca e empática.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">spa</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Conforto e tranquilidade</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ambiente sereno, técnicas anestésicas avançadas e procedimentos sem pressa para garantir que sua visita seja 100% confortável.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">assignment_turned_in</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Planejamento transparente</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Você entende cada etapa do plano de tratamento antes de começar, com orientações claras, fotos e sem surpresas.
+          </p>
+</div>
+</div>
+<!-- CTA Suave e Convidativo -->
+<div class="pt-space-xs flex flex-col sm:flex-row items-center gap-space-sm">
+<span class="font-body-md text-body-md text-on-surface font-medium">Comece hoje. Dê o primeiro passo pelo seu bem-estar.</span>
+<a class="h-10 px-space-md bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-colors" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank">
+<span class="">Agende sua avaliação</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 4: APRESENTAÇÃO DA CLÍNICA & DR. KENNY -->
+<section class="w-full px-margin-mobile py-space-2xl bg-surface reveal-on-scroll is-visible" id="clinica">
+<div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center gap-space-xl">
+<!-- Foto e Galeria de Ambiente da Clínica -->
+<div class="w-full lg:w-5/12 flex flex-col gap-space-sm">
+<div class="relative w-full aspect-[4/3] rounded-2xl bg-surface-container overflow-hidden shadow-md">
+<img alt="Dr. Kenny atendimento odontológico em Cáceres" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAMVSahXHgE3wGINA00QQPjezgE_1a3K6vynrpB_lenHXqhdGd6HsPN4NMOpF5hea_vTRCj-DxM4VLNuhMDGIrtzZOlmNACnG1SbdCpfCZSx1v6QDAUXeZesgq15tWHfqIXXTKgIMOZHJ_EoTKFibeMPU9YBrfLWbfok_liz-RTcp0XGypay2SvYdNMJTt22ixKGfhd-TK6N8pAH1rQ2f-2mFDl2mrSjU59T1F0hs">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent flex items-end p-space-md">
+<span class="text-surface font-label-md text-label-md">Atendimento humanizado e personalizado</span>
+</div>
+</div>
+<!-- Card de Consultório / Infraestrutura -->
+<div class="w-full aspect-[16/7] rounded-xl bg-surface-container overflow-hidden shadow-sm flex items-center justify-center p-space-md text-center">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Modern clean bright dental clinic reception and consultation room in Cáceres Mato Grosso, soft ambient illumination, pristine white medical cabinets, ergonomic dental chair, air conditioning and soothing blue accents reflecting calm hygiene" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7H6XBxvuZJJYyDScwWby2mqifloae9yCc8XHSaXupKYcD1Aom0JM296_3PCyvUehPSVLOWU9lYFhLIdmHNGnxbn5hdI6YvEhOc9vTv9CArb9A1G1SQShpLe9zC3ry_R6Yw0evioYQznukfvZHa3pLFswL0qVE_lc8_m68406bM4xAAnjeQKhij_Dr0Ps-5peXvX9Jhkjk9d2zxI_eqfzjUT599hB3vQ6EacTwrAY">
+</div>
+</div>
+<!-- Apresentação Conceitual & Credenciais -->
+<div class="w-full lg:w-7/12 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm w-fit">
+<span class="material-symbols-outlined text-[16px]">apartment</span>
+<span class="">SMILE ODONTOLOGIA • DR. KENNY</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+          Mais cuidado em cada detalhe. Mais confiança em cada sorriso.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Cada pessoa merece ser atendida com atenção e respeito. Nosso propósito é proporcionar uma experiência odontológica acolhedora, valorizando o cuidado com a saúde bucal em cada etapa do atendimento.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Localizada no coração de Cáceres, a Smile Odontologia foi idealizada pelo Dr. Kenny para unir a precisão clínica dos tratamentos modernos à tranquilidade de um atendimento próximo, escuta atenta e sem correrias.
+        </p>
+<!-- Bloco de Credenciais & Registro CRO -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-label-lg">
+              DK
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Dr. Kenny</p>
+<p class="font-body-sm text-body-sm text-secondary">Cirurgião-Dentista | CRO-MT • Cáceres</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest rounded-md text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="">Clínica Regularizada</span>
+</div>
+</div>
+<!-- Badges de Especialidades -->
+<div class="flex flex-wrap gap-2 pt-space-xs">
+<span class="px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">Clínica Geral Avançada</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">Estética Dental &amp; Resinas</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">Endodontia &amp; Prótese</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">Check-up Preventivo</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 5: TRATAMENTOS ODONTOLÓGICOS (LAYOUT ASSIMÉTRICO & DIVERSO) -->
+<section class="w-full px-margin-mobile py-space-2xl bg-surface-container-low reveal-on-scroll is-visible" id="tratamentos">
+<div class="max-w-screen-xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col items-start gap-space-xs max-w-2xl">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wide">Tratamentos Especializados</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+          Cuidados completos para a saúde do seu sorriso.
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Os tratamentos a seguir são sugestões personalizadas e sujeitas à criteriosa avaliação clínica individual pelo Dr. Kenny.
+        </p>
+</div>
+<!-- Grid de Procedimentos -->
+<div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Tratamento 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">dentistry</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Diagnóstico Inicial</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-2">Avaliação Odontológica</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mapeamento minucioso da cavidade oral, verificação de gengivas, dentes e mordida. Elaboração de plano de cuidado personalizado e transparente.
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20Avalia%C3%A7%C3%A3o%20Odontol%C3%B3gica" rel="noopener noreferrer" target="_blank">
+<span class="">Consultar disponibilidade</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Tratamento 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">clean_hands</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Saúde Preventiva</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-2">Limpeza &amp; Prevenção</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Profilaxia profissional com remoção de placa e tártaro, polimento e aplicação de flúor. O segredo para gengivas saudáveis e hálito puro.
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20Limpeza%20e%20Preven%C3%A7%C3%A3o" rel="noopener noreferrer" target="_blank">
+<span class="">Consultar disponibilidade</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Tratamento 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">auto_awesome</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Estética &amp; Brilho</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-2">Clareamento Dental</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tecnologia e protocolos seguros de consultório e caseiro supervisionado. Sorriso naturalmente iluminado com preservação do esmalte e sem sensibilidade excessiva.
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Clareamento%20Dental" rel="noopener noreferrer" target="_blank">
+<span class="">Consultar disponibilidade</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Tratamento 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">healing</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Harmonia Natural</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-2">Restaurações Estéticas</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Substituição de cáries ou restaurações antigas por resinas compostas modernas de alta tecnologia, com acabamento biomimético imperceptível.
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20Restaura%C3%A7%C3%A3o%20Est%C3%A9tica" rel="noopener noreferrer" target="_blank">
+<span class="">Consultar disponibilidade</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Tratamento 5 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">medical_services</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Preservação Dental</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-2">Tratamento de Canal</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Técnicas modernas e instrumentação de precisão para salvar seu dente de forma rápida, segura e com anestesia suave que elimina a dor.
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20Tratamento%20de%20Canal" rel="noopener noreferrer" target="_blank">
+<span class="">Consultar disponibilidade</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Tratamento 6 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">sentiment_very_satisfied</span>
+</div>
+<div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Reabilitação Oral</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-2">Prótese Dentária</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Devolução completa da função mastigatória, estabilidade e harmonia estética facial através de coroas, próteses fixas e soluções sob medida.
+            </p>
+</div>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20Pr%C3%B3tese%20Dent%C3%A1ria" rel="noopener noreferrer" target="_blank">
+<span class="">Consultar disponibilidade</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 6: DIFERENCIAIS (BEM-ESTAR INTEGRAL) -->
+<section class="w-full px-margin-mobile py-space-2xl bg-surface reveal-on-scroll is-visible" id="diferenciais">
+<div class="max-w-screen-xl mx-auto flex flex-col items-center text-center gap-space-xl">
+<div class="max-w-2xl flex flex-col items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wide">Experiência Diferenciada</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+          Seu bem-estar também faz parte do tratamento.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Acreditamos que ir ao dentista pode ser uma experiência calma, resolutiva e positiva. Cada detalhe da clínica foi pensado para proporcionar segurança e conforto.
+        </p>
+</div>
+<!-- 4 Pilares -->
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md text-left">
+<!-- Pilar 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-xs">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Atendimento Humanizado</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Respeito absoluto à sua sensibilidade, ritmo e dúvidas, com diálogo claro e sem pressa durante todo o procedimento.
+          </p>
+</div>
+<!-- Pilar 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-xs">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Atenção Individualizada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Consultas agendadas com tempo exclusivo para cada paciente, sem salas de espera cheias ou sobreposição de horários.
+          </p>
+</div>
+<!-- Pilar 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-xs">
+<span class="material-symbols-outlined text-[24px]">ac_unit</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Ambiente Acolhedor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Espaço climatizado, som ambiente relaxante, iluminação suave e padrão rigoroso de biossegurança e higiene.
+          </p>
+</div>
+<!-- Pilar 4 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col gap-space-sm shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-xs">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Compromisso Duradouro</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Soluções preventivas e materiais de primeira linha para que os resultados sejam funcionais, belos e resistentes a longo prazo.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 7: AVALIAÇÕES (PROVA SOCIAL PREPARADA) -->
+<section class="w-full px-margin-mobile py-space-2xl bg-surface-container-lowest reveal-on-scroll is-visible">
+<div class="max-w-screen-xl mx-auto flex flex-col items-center gap-space-xl">
+<div class="text-center max-w-xl flex flex-col items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wide">Depoimentos &amp; Reputação</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+          A confiança de quem escolhe cuidar do sorriso.
+        </h2>
+<!-- Classificação Google Reviews -->
+<div class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-surface-container-low rounded-full">
+<div class="flex text-amber-500 text-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">5.0</span>
+<span class="text-on-surface-variant text-body-sm font-body-sm">• Cáceres - MT</span>
+</div>
+</div>
+<!-- Estrutura Pronta para Comentários Reais de Pacientes Locais -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Comentário Estruturado 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Atendimento excepcional do Dr. Kenny! Sempre tive receio de procedimentos dentários, mas a tranquilidade e clareza com que fui atendida fizeram toda a diferença."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center font-semibold text-primary text-label-sm">
+              MS
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Mariana S.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Paciente em Cáceres</p>
+</div>
+</div>
+</div>
+<!-- Comentário Estruturado 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "A clínica é moderna, organizada e muito pontual. O Dr. Kenny explicou detalhadamente todas as opções de restauração e o resultado ficou super natural."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center font-semibold text-primary text-label-sm">
+              RA
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Rodrigo A.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Paciente em Cáceres</p>
+</div>
+</div>
+</div>
+<!-- Comentário Estruturado 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Ótima localização no centro da cidade, ambiente climatizado impecável e equipe muito atenciosa desde a recepção pelo WhatsApp até o consultório."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center font-semibold text-primary text-label-sm">
+              CL
+            </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Carla L.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Paciente em Cáceres</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 8: CHAMADA PARA AGENDAMENTO (SEÇÃO DE IMPACTO AZUL PROFUNDO) -->
+<section class="w-full px-margin-mobile py-space-2xl bg-tertiary text-on-tertiary reveal-on-scroll is-visible">
+<div class="max-w-screen-xl mx-auto flex flex-col items-center text-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[32px]">calendar_month</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-on-tertiary tracking-tight">
+        Seu sorriso não precisa esperar.
+      </h2>
+<p class="font-body-lg text-body-lg text-on-tertiary-container max-w-xl">
+        Dê o próximo passo para cuidar da sua saúde bucal. Entre em contato com a Smile Odontologia e agende seu atendimento com facilidade pelo WhatsApp.
+      </p>
+<div class="pt-space-sm flex flex-col sm:flex-row items-center gap-space-sm">
+<a class="h-14 px-8 bg-surface-container-lowest text-primary rounded-xl font-label-lg text-label-lg flex items-center gap-3 shadow-lg hover:bg-surface-container-low transition-all active:scale-[0.98]" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20agendar%20meu%20atendimento%20na%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6 fill-[#25D366] shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.83 7.42 8.48 7.5 8.19 7.82C7.9 8.14 7.07 8.92 7.07 10.5C7.07 12.08 8.22 13.61 8.38 13.82C8.54 14.03 10.61 17.22 13.78 18.58C14.53 18.91 15.12 19.1 15.58 19.25C16.34 19.49 17.03 19.46 17.57 19.38C18.18 19.29 19.44 18.62 19.7 17.88C19.96 17.15 19.96 16.52 19.88 16.39C19.8 16.26 19.59 16.18 19.27 16.02C18.96 15.86 17.43 15.11 17.14 15C16.86 14.9 16.65 14.85 16.44 15.17C16.23 15.48 15.63 16.18 15.45 16.39C15.26 16.6 15.08 16.62 14.77 16.46C14.45 16.31 13.44 15.98 12.24 14.91C11.31 14.07 10.68 13.04 10.5 12.73C10.32 12.41 10.48 12.24 10.64 12.08C10.78 11.94 10.96 11.71 11.12 11.52C11.27 11.34 11.33 11.21 11.43 11C11.53 10.8 11.48 10.61 11.4 10.46C11.32 10.3 10.72 8.83 10.47 8.23C10.23 7.64 9.98 7.72 9.8 7.71C9.63 7.71 9.42 7.71 9.21 7.71L9.04 7.42Z"></path></svg><span class="">Agendar pelo WhatsApp: (65) 99650-4742</span></a>
+</div>
+<p class="font-label-sm text-label-sm text-on-tertiary-container opacity-90">
+        Atendimento em Cáceres • Resposta rápida em horário comercial
+      </p>
+</div>
+</section>
+<!-- SEÇÃO 9: LOCALIZAÇÃO E CONTATO -->
+<section class="w-full px-margin-mobile py-space-2xl bg-surface reveal-on-scroll is-visible" id="localizacao">
+<div class="max-w-screen-xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col items-start gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wide">Fácil Acesso</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+          Venha nos visitar no centro de Cáceres
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Localização central com fácil acesso e estacionamento próximo para seu total conforto.
+        </p>
+</div>
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Detalhes de Endereço & Expediente -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Card Unidade -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Smile Odontologia • Dr. Kenny</h3>
+<p class="font-body-sm text-body-sm text-secondary">Cáceres, Mato Grosso</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Endereço:</span>
+<span class="">Rua Marechal Deodoro, 143 – Centro</span>
+<span class="">Cáceres – MT, CEP 78210-060</span>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Horário de Atendimento:</span>
+<span class="">Segunda a Sexta: 08:00 às 18:00</span>
+<span class="">Sábados: Mediante agendamento prévio</span>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">Telefone &amp; WhatsApp:</span>
+<a class="text-primary hover:underline font-medium" href="tel:65996504742">(65) 99650-4742</a>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-xs pt-space-xs">
+<a class="h-11 px-4 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary transition-colors shadow-sm" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20localiza%C3%A7%C3%A3o%20e%20agendamento." rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.83 7.42 8.48 7.5 8.19 7.82C7.9 8.14 7.07 8.92 7.07 10.5C7.07 12.08 8.22 13.61 8.38 13.82C8.54 14.03 10.61 17.22 13.78 18.58C14.53 18.91 15.12 19.1 15.58 19.25C16.34 19.49 17.03 19.46 17.57 19.38C18.18 19.29 19.44 18.62 19.7 17.88C19.96 17.15 19.96 16.52 19.88 16.39C19.8 16.26 19.59 16.18 19.27 16.02C18.96 15.86 17.43 15.11 17.14 15C16.86 14.9 16.65 14.85 16.44 15.17C16.23 15.48 15.63 16.18 15.45 16.39C15.26 16.6 15.08 16.62 14.77 16.46C14.45 16.31 13.44 15.98 12.24 14.91C11.31 14.07 10.68 13.04 10.5 12.73C10.32 12.41 10.48 12.24 10.64 12.08C10.78 11.94 10.96 11.71 11.12 11.52C11.27 11.34 11.33 11.21 11.43 11C11.53 10.8 11.48 10.61 11.4 10.46C11.32 10.3 10.72 8.83 10.47 8.23C10.23 7.64 9.98 7.72 9.8 7.71C9.63 7.71 9.42 7.71 9.21 7.71L9.04 7.42Z"></path></svg><span class="">Conversar no WhatsApp</span></a>
+<a class="h-11 px-4 bg-surface-container text-secondary rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors" href="https://maps.google.com/?q=Rua+Marechal+Deodoro+143+Centro+Caceres+MT" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+<span class="">Abrir no Google Maps</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Mapa incorporado estilizado -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="w-full h-80 lg:h-full min-h-[300px] bg-cover bg-center rounded-2xl shadow-sm relative overflow-hidden" data-location="Rua Marechal Deodoro, 143, Centro, Cáceres - MT, 78210-060" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFN_PLNKpksm0Rt32lIyMkNHNL2DLxkh0YX1Ko7S5ompR62y20qH4BnnvrGecQ3dreJ03zi9kyM45iwgb3W_NfBPLl107NDPGC37kFh6zkbkIXjDyT81BidQyWNwbg-5Lsft-48JgnYCDLKzJkdix39kCPxSs-CGzKQxYVA8hyK5X8KAOxloajLnlWNhOh0vewAv-ceKyAzhwUUOkfNoljmSC1aZrwvTkr_GmBjCQ')">
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-2 rounded-lg shadow-sm flex items-center gap-2 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">pin_drop</span>
+<span class="">Centro de Cáceres • Rua Mal. Deodoro, 143</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 10: RODAPÉ INSTITUCIONAL -->
+<footer class="w-full bg-surface-container-lowest px-margin-mobile py-space-xl shadow-sm">
+<div class="max-w-screen-xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-space-md pb-space-md border-b-0">
+<!-- Logo e Slogan -->
+<div class="flex flex-col gap-space-xs">
+<img alt="Smile Odontologia Dr. Kenny" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQE__1etcWbdGL7Y7bQh1GxWWvhMVak-j1VrV8mVgFd7XvqGiShHlvTuWAp-DxfgOkDuQZ2L5hXGVaWe_R8VEnHuzkhFrC0xvdIzycnsSuMyMD4RPNM4k8g529UZmx2tTO8AGCTRPRe7D40Gy6ElwbmGhwzfDaXdbZaSYawtOe-d427AS3iETz50yXebxiaGH5hhy76EatdDn-jGwh5yfDAZ_uTuzhXU9zBvtrv_c">
+<span class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-1">
+            Odontologia acolhedora, preventiva e estética no centro de Cáceres - Mato Grosso.
+          </span>
+</div>
+<!-- Links Rápidos -->
+<div class="flex flex-wrap gap-x-space-md gap-y-2">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#inicio">Início</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#clinica">A Clínica</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#tratamentos">Tratamentos</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#diferenciais">Diferenciais</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#localizacao">Localização</a>
+</div>
+<!-- Redes Sociais & Contato Rápido -->
+<div class="flex items-center gap-3">
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-primary transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-primary transition-colors" href="https://facebook.com" rel="noopener noreferrer" target="_blank" title="Facebook">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-[#25D366] hover:bg-surface-container-high transition-colors" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20falar%20com%20a%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank" title="WhatsApp"><svg class="w-5 h-5 fill-[#25D366]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.83 7.42 8.48 7.5 8.19 7.82C7.9 8.14 7.07 8.92 7.07 10.5C7.07 12.08 8.22 13.61 8.38 13.82C8.54 14.03 10.61 17.22 13.78 18.58C14.53 18.91 15.12 19.1 15.58 19.25C16.34 19.49 17.03 19.46 17.57 19.38C18.18 19.29 19.44 18.62 19.7 17.88C19.96 17.15 19.96 16.52 19.88 16.39C19.8 16.26 19.59 16.18 19.27 16.02C18.96 15.86 17.43 15.11 17.14 15C16.86 14.9 16.65 14.85 16.44 15.17C16.23 15.48 15.63 16.18 15.45 16.39C15.26 16.6 15.08 16.62 14.77 16.46C14.45 16.31 13.44 15.98 12.24 14.91C11.31 14.07 10.68 13.04 10.5 12.73C10.32 12.41 10.48 12.24 10.64 12.08C10.78 11.94 10.96 11.71 11.12 11.52C11.27 11.34 11.33 11.21 11.43 11C11.53 10.8 11.48 10.61 11.4 10.46C11.32 10.3 10.72 8.83 10.47 8.23C10.23 7.64 9.98 7.72 9.8 7.71C9.63 7.71 9.42 7.71 9.21 7.71L9.04 7.42Z"></path></svg></a>
+</div>
+</div>
+<!-- Rodapé Direitos & Responsabilidade Técnica -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center sm:text-left pt-space-xs">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+          © Smile Odontologia • Dr. Kenny. Todos os direitos reservados.
+        </p>
+<p class="font-label-sm text-label-sm text-secondary">
+          Rua Marechal Deodoro, 143 – Centro, Cáceres – MT | (65) 99650-4742
+        </p>
+</div>
+</div>
+</footer>
+<!-- SEÇÃO 11: BOTÃO FLUTUANTE DE WHATSAPP COM TOOLTIP INTERATIVO -->
+<div class="fixed bottom-20 right-4 z-40 flex items-center gap-2">
+<!-- Balãozinho animado com microcopy persuasiva -->
+<a class="hidden sm:flex items-center gap-2 bg-surface-container-lowest px-3 py-2 rounded-xl shadow-lg border-0 hover:bg-surface-container-low transition-all" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20agendar%20uma%20consulta." rel="noopener noreferrer" target="_blank">
+<span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Agende pelo WhatsApp</span>
+</a>
+<!-- Ícone de Ação Flutuante -->
+<a aria-label="Fale conosco no WhatsApp" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank"><svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.83 7.42 8.48 7.5 8.19 7.82C7.9 8.14 7.07 8.92 7.07 10.5C7.07 12.08 8.22 13.61 8.38 13.82C8.54 14.03 10.61 17.22 13.78 18.58C14.53 18.91 15.12 19.1 15.58 19.25C16.34 19.49 17.03 19.46 17.57 19.38C18.18 19.29 19.44 18.62 19.7 17.88C19.96 17.15 19.96 16.52 19.88 16.39C19.8 16.26 19.59 16.18 19.27 16.02C18.96 15.86 17.43 15.11 17.14 15C16.86 14.9 16.65 14.85 16.44 15.17C16.23 15.48 15.63 16.18 15.45 16.39C15.26 16.6 15.08 16.62 14.77 16.46C14.45 16.31 13.44 15.98 12.24 14.91C11.31 14.07 10.68 13.04 10.5 12.73C10.32 12.41 10.48 12.24 10.64 12.08C10.78 11.94 10.96 11.71 11.12 11.52C11.27 11.34 11.33 11.21 11.43 11C11.53 10.8 11.48 10.61 11.4 10.46C11.32 10.3 10.72 8.83 10.47 8.23C10.23 7.64 9.98 7.72 9.8 7.71C9.63 7.71 9.42 7.71 9.21 7.71L9.04 7.42Z"></path></svg></a>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(23,59,89,0.06)]" data-active-classes="text-primary font-label-md"><div class="h-16 px-space-sm flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-primary font-semibold transition-colors" data-path="inicio" href="#inicio"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Início</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="tratamentos" href="#tratamentos"><span class="material-symbols-outlined text-[22px]">medical_services</span><span class="font-label-sm text-label-sm">Serviços</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="sobre-dr-kenny" href="#clinica"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm">Dr. Kenny</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="localizacao-e-clinica" href="#localizacao"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-sm text-label-sm">Clínica</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#25D366] hover:opacity-80 transition-opacity" data-path="contato-whatsapp" href="https://wa.me/5565996504742?text=Ol%C3%A1%2C%20Dr.%20Kenny!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Smile%20Odontologia." rel="noopener noreferrer" target="_blank"><svg class="w-[22px] h-[22px] fill-[#25D366]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.83 7.42 8.48 7.5 8.19 7.82C7.9 8.14 7.07 8.92 7.07 10.5C7.07 12.08 8.22 13.61 8.38 13.82C8.54 14.03 10.61 17.22 13.78 18.58C14.53 18.91 15.12 19.1 15.58 19.25C16.34 19.49 17.03 19.46 17.57 19.38C18.18 19.29 19.44 18.62 19.7 17.88C19.96 17.15 19.96 16.52 19.88 16.39C19.8 16.26 19.59 16.18 19.27 16.02C18.96 15.86 17.43 15.11 17.14 15C16.86 14.9 16.65 14.85 16.44 15.17C16.23 15.48 15.63 16.18 15.45 16.39C15.26 16.6 15.08 16.62 14.77 16.46C14.45 16.31 13.44 15.98 12.24 14.91C11.31 14.07 10.68 13.04 10.5 12.73C10.32 12.41 10.48 12.24 10.64 12.08C10.78 11.94 10.96 11.71 11.12 11.52C11.27 11.34 11.33 11.21 11.43 11C11.53 10.8 11.48 10.61 11.4 10.46C11.32 10.3 10.72 8.83 10.47 8.23C10.23 7.64 9.98 7.72 9.8 7.71C9.63 7.71 9.42 7.71 9.21 7.71L9.04 7.42Z"></path></svg><span class="font-label-sm text-label-sm">WhatsApp</span></a></div></nav>
+<script>
+  // IntersectionObserver suave para animações durante a rolagem respeitando preferências
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+  });
+</script>
+
+
+</body></html>
