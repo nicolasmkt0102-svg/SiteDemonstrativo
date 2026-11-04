@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Dra. Caroline – Consultório Odontológico</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#ffdbcd", "on-secondary-fixed": "#0c1f16", "secondary-fixed": "#d2e8d9", "on-background": "#201b17", "surface-container-high": "#f1e6e0", "on-secondary-container": "#53675b", "on-secondary": "#ffffff", "surface-variant": "#ebe0da", "surface-tint": "#865139", "outline-variant": "#d7c2bb", "tertiary-fixed-dim": "#d6c3b0", "surface-bright": "#fff8f5", "on-primary-container": "#fffbff", "surface-container-low": "#fdf1eb", "secondary-fixed-dim": "#b6ccbd", "surface-container-highest": "#ebe0da", "outline": "#84746d", "secondary-container": "#cfe5d6", "on-tertiary-container": "#fffbff", "tertiary": "#685a4a", "on-primary": "#ffffff", "primary-fixed-dim": "#fcb799", "on-error-container": "#93000a", "surface": "#fff8f5", "on-primary-fixed-variant": "#6a3a24", "on-error": "#ffffff", "inverse-primary": "#fcb799", "surface-container": "#f7ece5", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#faefe8", "on-secondary-fixed-variant": "#384b40", "on-tertiary-fixed-variant": "#514536", "on-tertiary": "#ffffff", "on-surface": "#201b17", "tertiary-container": "#817261", "on-primary-fixed": "#341001", "primary-container": "#9f674d", "background": "#fff8f5", "inverse-surface": "#352f2b", "secondary": "#4f6357", "surface-dim": "#e3d8d2", "error": "#ba1a1a", "tertiary-fixed": "#f3dfcb", "on-surface-variant": "#52443e", "on-tertiary-fixed": "#241a0d", "primary": "#834f37", "error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "margin-desktop": "5rem", "space-xl": "3rem", "gutter-desktop": "2.5rem", "margin": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem", "space-lg": "1.75rem", "gutter": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-xl": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "display-xl-mobile": ["Playfair Display"] }, fontSize: { "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600" }], "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "500" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.04em", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }], "body-md": ["16px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "display-xl": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "400" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "400" }], "display-xl-mobile": ["38px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Logo Dra. Caroline" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3HBeNzFZ4X0k1eIN7VzMpgP6pJ7RCe5BgwxLmnDNuBW5SRT5xyCQuExX9qNg9Xpme_APhPgLExmOkBaVjabMt47SOomhvdQ0lXUs5QOCG0FZlpXybEHggwIf5nn9hyy9m1Fjy4XBYBMRJ2KY4Lx6dkavIl5zpJLBZz7PxyMljKUCDMUj4awgGjJFKpm4yNP_hTVz2dxBzB7edoCV2kLcGZBdBTxZSl5ZURPVTkyA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Dra. Caroline</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Inicio</span></div></div><div class="flex items-center gap-space-xs"><a class="min-h-[44px] px-space-md py-space-xs rounded-full bg-primary text-on-primary flex items-center gap-1 font-label-lg text-label-lg transition-transform active:scale-95 shadow-[0_4px_12px_rgba(131,79,55,0.25)]" href="https://wa.me/5565999162039" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">calendar_today</span><span class="hidden xs:inline">Agendar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface flex-grow"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. HERO SECTION (CONVERSÃO & PRIMEIRA IMPRESSÃO EDITORIAL) -->
+<section class="relative px-margin pt-space-md pb-space-xl flex flex-col gap-space-lg overflow-hidden">
+<!-- Ambient Warm Glow Background -->
+<div class="absolute -top-24 -right-20 w-80 h-80 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-28 w-72 h-72 rounded-full bg-secondary-fixed/25 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-sm scroll-reveal">
+<!-- Badge de Localização & Posicionamento -->
+<div class="self-start inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/60 shadow-sm backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-container tracking-wider uppercase">Cáceres, Mato Grosso • Odontologia Humanizada</span>
+</div>
+<!-- Título Principal Editorial -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight tracking-tight mt-1">Volte a sorrir com segurança. <span class="italic font-normal text-primary">Sem dor, sem julgamentos e no seu ritmo.</span></h1>
+<!-- Parágrafos de Valor -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Consultas com horário exclusivo e anestesia suave no centro de Cáceres. Cuidamos do seu sorriso com escuta atenta, diagnóstico transparente e a tranquilidade que você sempre procurou.</p>
+<div class="p-space-sm px-space-md rounded-2xl bg-surface-container-low shadow-sm">
+<p class="font-body-sm text-body-sm text-tertiary italic">“Consultas pontuais, ambiente calmo e um plano de tratamento claro, sem procedimentos desnecessários ou pressa.”</p>
+</div>
+</div>
+<!-- Composição Fotográfica Editorial com Moldura Táctil -->
+<div class="relative w-full mt-space-xs scroll-reveal">
+<div class="relative mx-auto max-w-[340px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-surface-container-high">
+<img alt="Dra. Caroline em seu consultório odontológico humanizado e acolhedor em Cáceres MT" class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1X34VWH0YdMVfImtja1N3eJV4Icqn955MVJnkiLMC8z8B7oz1HO5GR4ksqD8B5YAsD-pGx_MY6KBbsftWy6TsMWUrNP-Cy1Xhp1Z0aOueLubXNScAYNQNWZ9SO0t2lCvbv-tdnEUee6wBvInrWZdGebYvPoRrKFw1e1AcgjbVq0QYmaFEg3NdxOK701EBS1iuK6Yt2CLfCKb7d7o45kd1lpGJsyltBdtArdoD7mhoCu"/>
+<!-- Gradient Scrim for subtle elegance -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Badge Flutuante Táctil -->
+<div class="absolute -bottom-4 left-4 right-4 mx-auto max-w-[290px] p-space-sm px-space-md rounded-full bg-surface/95 backdrop-blur-md shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">spa</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">Atendimento acolhedor e sem pressa</span>
+</div>
+</div>
+<!-- CTAs da Primeira Dobra -->
+<div class="flex flex-col gap-space-sm pt-space-md z-10 scroll-reveal"><a class="w-full min-h-[52px] px-space-lg py-3 rounded-full bg-primary text-on-primary flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all active:scale-[0.98]" href="https://wa.me/5565999162039?text=Ol%C3%A1%2C%20Dra.%20Caroline!%20Gostaria%20de%20agendar%20minha%20consulta%20agora." rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span><span class="">Conversar com a Dra. Caroline no WhatsApp</span></a><a class="w-full min-h-[48px] px-space-md py-2.5 rounded-full bg-surface-container-low text-primary flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all active:scale-[0.98]" href="#consultorio-detalhes"><span class="material-symbols-outlined text-[18px]">nature_people</span><span class="">Conheça nosso consultório</span></a><div class="flex flex-col items-center text-center gap-0.5 pt-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center justify-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Resposta rápida no WhatsApp • Atendimento particular exclusivo</span><span class="text-[11px] text-outline">Horários reservados da semana com vagas limitadas em Cáceres</span></div></div>
+</section>
+<!-- 2. SEÇÃO DE IDENTIFICAÇÃO (EMPATIA & CONEXÃO SENSÍVEL) -->
+<section class="px-margin py-space-xl bg-surface-container-lowest relative">
+<div class="flex flex-col gap-space-md max-w-lg mx-auto">
+<div class="flex flex-col gap-space-xs scroll-reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Cuidado e Compreensão</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">Adiou a visita ao dentista por medo, vergonha ou falta de tempo?</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed scroll-reveal">Você não precisa mais conviver com desconforto, insegurança ao sorrir ou o receio de broncas e procedimentos dolorosos. No nosso consultório em Cáceres, você encontra um atendimento que desmistifica o dentista: ouvimos seu histórico com respeito, respeitamos sua sensibilidade e explicamos cada detalhe antes de qualquer intervenção.</p>
+<!-- 3 Tópicos de Acolhimento -->
+<div class="flex flex-col gap-space-sm pt-space-xs"><div class="flex items-start gap-space-sm p-space-md rounded-2xl bg-surface-container-low shadow-sm scroll-reveal" data-stagger="0"><div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">favorite</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Zero julgamento, 100% acolhimento</span><p class="font-body-sm text-body-sm text-on-surface-variant">Não importa se faz 6 meses ou 6 anos desde sua última consulta. Nosso compromisso é ajudar você daqui para frente com conforto total.</p></div></div><div class="flex items-start gap-space-sm p-space-md rounded-2xl bg-surface-container-low shadow-sm scroll-reveal" data-stagger="1"><div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary-fixed text-[20px]">hourglass_top</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Pontualidade rigorosa e sem pressa</span><p class="font-body-sm text-body-sm text-on-surface-variant">Horários espaçados com exclusividade na sala clínica. Você é atendido no horário certo, sem salas de espera cheias.</p></div></div><div class="flex items-start gap-space-sm p-space-md rounded-2xl bg-surface-container-low shadow-sm scroll-reveal" data-stagger="2"><div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">checklist_rtl</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Tratamento claro e no seu ritmo</span><p class="font-body-sm text-body-sm text-on-surface-variant">Você no controle de cada decisão. Diagnóstico transparente, sem surpresas no orçamento ou procedimentos invasivos sem necessidade.</p></div></div></div>
+<!-- Botão Sutil de Ação -->
+<div class="pt-space-xs scroll-reveal">
+<a class="w-full min-h-[48px] py-3 px-space-md rounded-full bg-secondary text-on-secondary flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-sm hover:bg-secondary/90 transition-all active:scale-[0.98]" href="https://wa.me/5565999162039?text=Ol%C3%A1%2C%20Dra.%20Caroline!%20Gostaria%20de%20dar%20o%20primeiro%20passo%20e%20cuidar%20do%20meu%20sorriso." rel="noopener noreferrer" target="_blank"><span class="">Agendar minha consulta sem receio agora</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- 3. APRESENTAÇÃO DA DENTISTA (EDITORIAL & HUMANIZADA) -->
+<section class="px-margin py-space-xl bg-surface-container relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs scroll-reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Propósito &amp; Vocação</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          Mais do que cuidar de sorrisos, cuidar de pessoas.
+        </h2>
+</div>
+<div class="p-space-md rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md scroll-reveal">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          “Acredito que a odontologia atinge o seu melhor propósito quando combina técnica apurada com escuta atenta. Cada paciente carrega expectativas, anseios e uma história única. Por isso, meu compromisso no consultório é proporcionar uma experiência onde você se sinta seguro, acolhido e respeitado em cada detalhe.”
+        </p>
+<!-- Tags Estruturadas & Transparentes -->
+<div class="flex flex-wrap gap-2 pt-space-xs">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="">CRO-MT 8312</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">volunteer_activism</span>
+<span class="">Atendimento Humanizado</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">location_on</span>
+<span class="">Cáceres - MT</span>
+</div>
+</div>
+<!-- Assinatura Editorial Estilizada -->
+<div class="pt-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dra. Caroline</span>
+<span class="font-label-sm text-label-sm text-primary">Cirurgiã-Dentista • Cáceres / MT</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm italic">DC</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. TRATAMENTOS (LAYOUT ASSIMÉTRICO & NÃO-REPETITIVO) -->
+<section class="px-margin py-space-xl bg-surface relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs scroll-reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Cuidado Integral</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          Cuidados pensados para a sua saúde e autoestima
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Tratamentos odontológicos integrados, com foco na sua saúde biológica e harmonia natural.
+        </p>
+</div>
+<!-- Grid Assimétrico com Variação de Formatos & Badges -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1: Avaliação Odontológica (Destaque Largo) -->
+<div class="p-space-lg rounded-3xl bg-primary-fixed/35 shadow-sm flex flex-col gap-space-xs scroll-reveal" data-stagger="0">
+<div class="flex items-center justify-between">
+<span class="p-2 rounded-2xl bg-surface text-primary">
+<span class="material-symbols-outlined text-[24px]">clinical_notes</span>
+</span>
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Ponto de Partida</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2">Avaliação Odontológica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diagnóstico detalhado e planejamento individualizado, ouvindo suas reais queixas com calma e clareza diagnóstica.</p>
+</div>
+<!-- 2 Colunas para Tratamentos Complementares -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Card 2: Limpeza e Prevenção -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs scroll-reveal" data-stagger="1">
+<span class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">clean_hands</span>
+</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">Limpeza &amp; Prevenção</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cuidados profiláticos para manter gengivas saudáveis e seu sorriso protegido contra inflamações.</p>
+</div>
+<!-- Card 3: Restaurações Estéticas -->
+<div class="p-space-md rounded-2xl bg-surface-container-high shadow-sm flex flex-col gap-space-xs scroll-reveal" data-stagger="2">
+<span class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">Restaurações Estéticas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Devolva a forma e a função aos seus dentes com resinas de alta biomimética e imperceptíveis.</p>
+</div>
+</div>
+<!-- Card 4: Clareamento Dental (Card Destaque Iluminação) -->
+<div class="p-space-md rounded-2xl bg-secondary-fixed/30 shadow-sm flex items-start gap-space-md scroll-reveal" data-stagger="0">
+<div class="w-12 h-12 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">flare</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Clareamento Dental</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm">Supervisionado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ilumine seu sorriso de forma segura, minimizando qualquer sensibilidade com protocolos modernos.</p>
+</div>
+</div>
+<!-- 2 Colunas: Canal & Prótese -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Card 5: Tratamento de Canal -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs scroll-reveal" data-stagger="1">
+<span class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">healing</span>
+</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">Tratamento de Canal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Procedimentos modernos focados em preservar seus dentes naturais com conforto e anestesia suave.</p>
+</div>
+<!-- Card 6: Prótese Dentária -->
+<div class="p-space-md rounded-2xl bg-surface-container-high shadow-sm flex flex-col gap-space-xs scroll-reveal" data-stagger="2">
+<span class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mt-1">Prótese Dentária</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reabilitação e firmeza para você voltar a mastigar e sorrir com total plenitude e estabilidade.</p>
+</div>
+</div>
+</div>
+<!-- Nota de Transparência Ética -->
+<div class="p-space-sm px-space-md rounded-xl bg-surface-container-low flex items-center gap-2 mt-space-xs scroll-reveal">
+<span class="material-symbols-outlined text-outline text-[18px]">info</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Procedimentos e planos definidos sob criteriosa avaliação individual no consultório.</span>
+</div>
+</div>
+</section>
+<!-- 5. SEÇÃO DE EXPERIÊNCIA E DIFERENCIAIS -->
+<section class="px-margin py-space-xl bg-surface-container-low relative" id="consultorio-detalhes">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs scroll-reveal">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Experiência Diferenciada</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          Um atendimento que respeita o seu tempo e o seu sorriso.
+        </h2>
+</div>
+<!-- 4 Pilares Estruturados -->
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="p-space-md rounded-2xl bg-surface shadow-sm flex items-start gap-space-md scroll-reveal" data-stagger="0">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed text-[22px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Atenção Individualizada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Horários espaçados para que você nunca aguarde em salas cheias nem sinta uma consulta apressada.</p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface shadow-sm flex items-start gap-space-md scroll-reveal" data-stagger="1">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[22px]">favorite_border</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Atendimento Humanizado</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sensibilidade e cuidado com o seu conforto físico e psicológico do início ao fim do procedimento.</p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface shadow-sm flex items-start gap-space-md scroll-reveal" data-stagger="2">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed text-[22px]">psychology_alt</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Ambiente Acolhedor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Um consultório com iluminação suave, aromas terapêuticos e o aconchego de uma casa tranquila em Cáceres.</p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface shadow-sm flex items-start gap-space-md scroll-reveal" data-stagger="3">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Compromisso com a Saúde Bucal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Orientações claras e decisões terapêuticas sempre compartilhadas com você a cada passo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. PROVA SOCIAL (AVALIAÇÕES GOOGLE) -->
+<section class="px-margin py-space-xl bg-surface relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs text-center items-center scroll-reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Reconhecimento</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          A confiança de quem já conhece nosso atendimento.
+        </h2>
+</div>
+<!-- Card de Autoridade Google -->
+<div class="p-space-lg rounded-3xl bg-surface-container-low shadow-sm flex flex-col items-center text-center gap-space-xs scroll-reveal">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface shadow-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Google Avaliações</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-display-xl-mobile text-display-xl-mobile font-semibold text-on-surface">5,0</span>
+<div class="flex flex-col items-start">
+<div class="flex text-amber-600 gap-0.5">
+<span class="material-symbols-outlined text-[20px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[20px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[20px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[20px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[20px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nota máxima de excelência</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+          Baseado em 10 avaliações de pacientes locais em Cáceres - MT.
+        </p>
+</div>
+<!-- Depoimentos Autênticos em Quote Cards -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-2 scroll-reveal" data-stagger="0">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-on-primary-fixed text-xs">
+                M
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Mariana S.</span>
+<span class="font-label-sm text-label-sm text-outline">Paciente em Cáceres</span>
+</div>
+</div>
+<div class="flex text-amber-600">
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">“A Dra. Caroline é extremamente atenciosa. Eu tinha muito medo de procedimentos odontológicos, mas ela explicou cada passo com paciência e não senti dor alguma.”</p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-2 scroll-reveal" data-stagger="1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed text-xs">
+                R
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Rodrigo C.</span>
+<span class="font-label-sm text-label-sm text-outline">Paciente em Cáceres</span>
+</div>
+</div>
+<div class="flex text-amber-600">
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-[16px]" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+            “Ambiente muito acolhedor, pontualidade britânica e um atendimento impecável. Dá gosto ir ao consultório e se sentir tão bem cuidado.”
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. LOCALIZAÇÃO E CONTATO (CÁCERES - MT) -->
+<section class="px-margin py-space-xl bg-surface-container relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs scroll-reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Fácil Acesso</span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+          Venha nos visitar no centro de Cáceres
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Localização central privilegiada, com facilidade de estacionamento e acessibilidade.
+        </p>
+</div>
+<!-- Card do Mapa com data-location obrigatório -->
+<div class="relative w-full rounded-3xl overflow-hidden shadow-md bg-surface-container-high scroll-reveal">
+<div class="w-full h-52 bg-cover bg-center flex items-end p-space-md" data-location="Rua João Pessoa, 274, Centro, Cáceres, Mato Grosso" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAboYk19trdFHtGS2hp2l5_aukOORF1fAMo8MfJ9d_SYtj_RY3wC-cQSF68GsZcswHIaG6veWbPzwvRT2Sbbxyl_B9c6uye3mlRbxV_p7vtnmbGAq35i0N0cmj5JqNIIK4FniurhjOj8A8WBur-vBChYKPje0n8FCiUBncfWUL1WqkOyfEMh3eO9tFD2jL65TBfTLhHllLBaIcwldFsn-U6rb1uC7rg5vhXiDWCnUE");'>
+<a class="px-4 py-2 rounded-full bg-surface/95 text-on-surface font-label-sm text-label-sm shadow-md flex items-center gap-1.5 backdrop-blur-md active:scale-95 transition-all" href="https://maps.google.com/?q=Rua+Joao+Pessoa,+274,+Centro,+Caceres+-+MT" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[18px]">map</span>
+<span class="">Abrir no Google Maps</span>
+</a>
+</div>
+</div>
+<!-- Informações Estruturadas -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm scroll-reveal">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Endereço</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Rua João Pessoa, 274 – Centro<br/>Cáceres – MT • CEP 78200-000
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">phone_iphone</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">WhatsApp Oficial</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">(65) 99916-2039</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Horários</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Atendimento exclusivo com agendamento prévio</p>
+</div>
+</div>
+</div>
+<!-- Botões de Ação para Rotas -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm scroll-reveal">
+<a class="min-h-[48px] py-2.5 px-space-md rounded-full bg-surface-container-high text-on-surface flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-sm hover:bg-surface-container-highest transition-all active:scale-[0.98]" href="https://maps.google.com/?q=Rua+Joao+Pessoa,+274,+Centro,+Caceres+-+MT" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+<span class="">Traçar Rota no Maps</span>
+</a>
+<a class="min-h-[48px] py-2.5 px-space-md rounded-full bg-secondary text-on-secondary flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-sm hover:bg-secondary/90 transition-all active:scale-[0.98]" href="https://wa.me/5565999162039?text=Ol%C3%A1%2C%20Dra.%20Caroline!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20a%20localiza%C3%A7%C3%A3o%20do%20consult%C3%B3rio." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="">Chamar no WhatsApp</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 8. CHAMADA FINAL (ENCERRAMENTO IMPACTANTE EM TERRACOTA) -->
+<section class="px-margin py-space-xl bg-primary text-on-primary relative overflow-hidden scroll-reveal">
+<!-- Ambient circle -->
+<div class="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-primary-container blur-2xl opacity-60 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md text-center items-center max-w-md mx-auto">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">favorite</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-primary leading-snug">
+          Seu próximo sorriso começa com uma decisão.
+        </h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim leading-relaxed">
+          Não deixe o cuidado com sua saúde bucal para depois. Entre em contato e dê o primeiro passo para cuidar melhor de você.
+        </p>
+</div>
+<div class="w-full pt-space-xs">
+<a class="w-full min-h-[52px] px-space-lg py-3 rounded-full bg-surface text-primary flex items-center justify-center gap-2 font-label-lg text-label-lg shadow-xl hover:bg-surface-bright transition-all active:scale-[0.98]" href="https://wa.me/5565999162039?text=Ol%C3%A1%2C%20Dra.%20Caroline!%20Decidi%20cuidar%20do%20meu%20sorriso%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="">Quero agendar minha avaliação</span>
+</a>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed/80">
+        Atendimento em Cáceres – MT • CRO-MT 8312
+      </span>
+</div>
+</section>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Touch feedback para botões de agendamento
+    const buttons = document.querySelectorAll('a[href^="https://wa.me"]');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (navigator.vibrate) {
+          navigator.vibrate(15);
+        }
+      });
+    });
+
+    // Scroll reveal com IntersectionObserver e escalonamento suave
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const staggerIndex = el.dataset.stagger;
+            if (staggerIndex !== undefined) {
+              const delay = parseInt(staggerIndex, 10) * 120;
+              el.style.transitionDelay = `${delay}ms`;
+            }
+            el.classList.add('is-revealed');
+            obs.unobserve(el);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    } else {
+      revealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+  });
+</script><footer class="w-full px-margin py-space-xl bg-surface-container-low mt-auto flex flex-col gap-space-md text-on-surface-variant"><div class="flex flex-col gap-space-xs"><h2 class="font-headline-sm text-headline-sm text-on-surface">Dra. Caroline</h2><p class="font-label-lg text-label-lg text-primary">Consultório Odontológico • CRO-MT</p></div><div class="grid grid-cols-1 gap-space-sm font-body-sm text-body-sm"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">location_on</span><span class="">Cáceres – MT • Centro Médico &amp; Odontológico Integrado</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">call</span><span class="">(65) 99916-2039</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">schedule</span><span class="">Segunda a Sexta: 08h – 18h30</span></div></div><div class="pt-space-sm flex flex-col gap-space-xs text-outline font-label-sm text-label-sm"><p class="">© Dra. Caroline. Todos os direitos reservados.</p><p class="">Odontologia estética, reabilitação e cuidados integrados.</p></div></footer></main><div class="fixed bottom-24 right-4 z-40 flex items-center"><a class="relative group flex items-center gap-2 bg-secondary text-on-secondary px-4 py-3 rounded-full shadow-[0_10px_25px_-5px_rgba(79,99,87,0.35)] transition-transform active:scale-95 min-h-[44px]" href="https://wa.me/5565999162039" rel="noopener noreferrer" target="_blank" title="Agende pelo WhatsApp (65) 99916-2039"><span class="material-symbols-outlined text-[22px]">chat</span><span class="font-label-lg text-label-lg pr-1">Agendamento Exclusivo</span><span class="absolute bottom-full right-0 mb-2 hidden group-hover:flex whitespace-nowrap bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm px-3 py-1.5 rounded-lg shadow-md pointer-events-none">Agende pelo WhatsApp (65) 99916-2039</span></a></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-16 min-h-[44px] min-w-[44px] transition-colors text-primary font-semibold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Início</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="tratamentos" href="#"><span class="material-symbols-outlined text-[24px]">dentistry</span><span class="font-label-sm text-label-sm">Tratamentos</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="sobre-a-dra" href="#"><span class="material-symbols-outlined text-[24px]">clinical_notes</span><span class="font-label-sm text-label-sm">Dra. Caroline</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="consultorio" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-sm text-label-sm">Consultório</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="contato-e-localizacao" href="#"><span class="material-symbols-outlined text-[24px]">pin_drop</span><span class="font-label-sm text-label-sm">Localização</span></a></div></nav>
+</body></html>
